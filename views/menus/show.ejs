@@ -1,0 +1,349 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+ 
+  <video autoplay muted loop id="myVideo"  src="https://res.cloudinary.com/dtca2p99y/video/upload/v1675161678/mess/strawberry2_y1lhsr.mp4" type="video/mp4">
+  </video>
+  
+          
+         
+    
+
+ 
+<div class="wrapper" >
+  
+   
+  
+  <div class="cols">
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url('https://images.pexels.com/photos/103124/pexels-photo-103124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+						<div class="inner">
+							<p style="font-size: 45px;"><strong>BREAKFAST</strong></p>
+              
+              
+						</div>
+					</div>
+					<div class="back" style="background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675106633/mess/mess2_x8ujjc.png');">
+						<div class="inner" >
+						  <p><%= menu.breakfast.fixed%></p>
+              <p><%= menu.breakfast.variable_breakfast%></p>
+						</div>
+            <% if(currentUser&& currentUser.username==="admin"){ %>
+     
+              <p class="edit" ><strong><a style="text-decoration: none;color: #fff;" href="/menus/<%=menu._id%>/edit">edit</a></strong>
+         
+             <%}%>
+					</div>
+				</div>
+			</div>
+
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image:url('https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+						<div class="inner">
+							<p style="font-size: 45px;"><strong>LUNCH</strong></p>
+              
+						</div>
+					</div>
+					<div class="back" style="background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675106782/mess/mess3_swbtmm.png');">
+						<div class="inner">
+							<p> <%= menu.lunch.fixed%> </p>
+                <p> <%= menu.lunch. variable_sabji%> </p>
+						</div>
+            <% if(currentUser&& currentUser.username==="admin"){ %>
+     
+              <p class="edit" ><strong><a style="text-decoration: none;color: #fff;" href="/menus/<%=menu._id%>/edit">edit</a></strong>
+         
+             <%}%>
+           
+					</div>
+				</div>
+			</div>
+
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url('https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+						<div class="inner">
+							<p style="font-size: 45px;"><strong>DINNER</strong>
+               
+                </p>
+              
+						</div>
+					</div>
+					<div class="back" style="background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675107002/mess/mess4_rhdg6g.png');">
+						<div class="inner">
+							<p><%= menu.dinner.fixed%></p>
+              <p><%= menu.dinner.variable_sabji%></p>
+               <p><%= menu.dinner.variable_sweets%></p>
+               
+						</div>
+     
+            <% if(currentUser&& currentUser.username==="admin"){ %>
+     
+              <p class="edit" ><strong><a style="text-decoration: none;color: #fff;" href="/menus/<%=menu._id%>/edit">edit</a></strong>
+         
+             <%}%>
+            
+				</div>
+			</div>
+
+   
+      </div>
+      </div>
+      
+  </body>
+<style>
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+h2{
+  font-size: 4rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+  margin:0rem 0 ;
+}
+
+h1{
+  font-size: 4rem;
+  font-family: 'Calibiri';
+  font-weight: normal;
+  color: rgb(244, 243, 248);
+  text-align: center;
+  margin: 0rem 0;
+}
+.edit{
+  font-size: 3rem;
+  font-family:copperplate gothic light;
+  font-weight: normal;
+  color: rgb(255, 254, 255);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  background-color: black ;opacity: 70%;
+
+}
+.wrapper{
+  width: 100%;
+  height:100%;
+  margin: 1 auto;
+  max-width: 100rem;
+  
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cols2{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+h2{
+    font-size: 3rem;
+    font-family:copperplate gothic light;
+  font-weight: normal;
+  color: rgb(242, 240, 248);
+  text-align: left;
+ 
+ 
+  
+
+}
+.col{
+  width: calc(25% - 2rem);
+  margin: 4rem;
+  cursor: pointer;
+}
+.col2{
+  width: calc(25% - 2rem);
+  margin: 4rem;
+  cursor: pointer;
+}
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+  box-shadow: 5px 20px 20px 0 rgb(255, 249, 249);
+  box-decoration-break: slice;
+  border-radius: 20px;
+  box-sizing: border-box;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 400px;
+  min-width: 400px;
+	height: auto;
+	border-radius: 20px;
+  border-color: whitesmoke;
+  border-width: 100px;
+	color: #fff;
+	font-size: 2rem;
+}
+
+.back{
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#myVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 2000px;
+  max-height:1200px;
+}
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.7);
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+</style>

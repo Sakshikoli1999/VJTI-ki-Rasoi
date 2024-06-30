@@ -1,0 +1,56 @@
+<head>
+    <% layout ('layouts/boilerplate')%>
+</head>
+</body>
+</html>
+
+      
+ 
+ <div class="max-w-lg mx-auto mt-28 mb-16">
+  <div class="rounded-3xl border bg-white px-4 pt-8 pb-10 shadow-lg">
+    <div class="relative mx-auto w-36 rounded-full">
+      <span class="absolute right-0 m-3 h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-300 ring-offset-2"></span>
+      <img class="mx-auto h-auto w-full rounded-full" src="https://tse2.mm.bing.net/th?id=OIP.OlnxO753VRgHKDLLDzCKoAHaHw&pid=Api&P=0" alt="" />
+    </div>
+    <h1 class="my-1 text-center text-xl font-bold leading-8 text-gray-900"><%= currentUser.name %></h1><br>
+    <ul class="mt-3 divide-y rounded-xl bg-gray-100 py-2 px-3 text-gray-600 shadow-sm hover:text-gray-700 hover:shadow">
+      <li class="flex items-center py-3 text-sm">
+        <span class="text-gray-900 font-bold ">Full Name</span>
+        <span class="ml-auto"><%= currentUser.name %></span>
+      </li>
+      <li class="flex items-center py-3 text-sm">
+        <span class="text-gray-900 font-bold ">Email</span>
+        <span class="ml-auto"><%= currentUser.email %></span>
+      </li>
+      <% if(currentUser.card!=-1) {%> 
+      <li class="flex items-center py-3 text-sm">
+        <span class="text-gray-900 font-bold ">Card Number</span>
+        <span class="ml-auto"><%= currentUser.card %></span>
+      </li>
+      <% } %> 
+      <% if(currentUser.card!=-1) {%> 
+      <li class="flex items-center py-3 text-sm">
+        <span class="text-gray-900 font-bold ">Status</span>
+        <span class="ml-auto">Member</span>
+      </li>
+      <% } else if(currentUser.card===-1 && currentUser.username==="admin") {%> 
+        <li class="flex items-center py-3 text-sm">
+          <span class="text-gray-900 font-bold ">Status</span>
+          <span class="ml-auto">Admin</span>
+        </li>
+        <% }else if(currentUser.card===-1 ) { %> 
+          <li class="flex items-center py-3 text-sm">
+            <span class="text-gray-900 font-bold ">Status</span>
+            <span class="ml-auto">Guest</span>
+          </li>
+          <% } %> 
+    </ul>
+  </div>
+</div>
+
+<style>
+  body{
+    background-image:url("https://wallpaperaccess.com/full/2454622.jpg");
+
+  }
+</style>

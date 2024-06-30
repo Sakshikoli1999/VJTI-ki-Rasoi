@@ -1,0 +1,219 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+  <body>
+    <header> 
+      <div class="header">
+      
+        <div class="carousel">
+            <div tabindex="0" class="carousel--item one card"> 
+               <h1><a style ="text-decoration: none;" href="/menus/<%= menus[0]._id%>"><div class="food-items">
+                   
+                <div class="details">
+                    <div class="details-sub">
+                  
+                           <h1><%= menus[0].weekday %></h1>   
+                    </div>
+                </div>
+            </div>
+            </a></h1> 
+            </div>
+            <div tabindex="0" class="carousel--item two card">
+                <h1><a style ="text-decoration: none;" href="/menus/<%= menus[1]._id%>"><div class="food-items">
+                   
+                    <div class="details">
+                        <div class="details-sub">
+                      
+                               <h1><%= menus[1].weekday %></h1>   
+                        </div>
+                    </div>
+                </div>
+            </a></h1> 
+            </div>
+            <div tabindex="0" class="carousel--item three card">
+                <h1><a style ="text-decoration: none;" href="/menus/<%= menus[2]._id%>"><div class="food-items">
+                   
+                    <div class="details">
+                        <div class="details-sub">
+                      
+                               <h1><%= menus[2].weekday %></h1>   
+                        </div>
+                    </div>
+                </div>
+            </a></h1> 
+            </div>
+            <div tabindex="0" class="carousel--item four card">
+                <h1><a style ="text-decoration: none;" href="/menus/<%= menus[3]._id%>"><div class="food-items">
+                   
+                    <div class="details">
+                        <div class="details-sub">
+                      
+                               <h1><%= menus[3].weekday %></h1>   
+                        </div>
+                    </div>
+                </div>
+            </a></h1> 
+            </div>
+            <div tabindex="0" class="carousel--item five card">
+                <h1><a style ="text-decoration: none;" href="/menus/<%= menus[4]._id%>"><div class="food-items">
+                   
+                    <div class="details">
+                        <div class="details-sub">
+                      
+                               <h1><%= menus[4].weekday %></h1>   
+                        </div>
+                    </div>
+                </div>
+            </a></h1> 
+            </div>
+          
+            <div tabindex="0" class="carousel--item six card">
+            <h1><a style ="text-decoration: none;" href="/menus/<%= menus[5]._id%>">
+                <div class="food-items">
+               
+                    <div class="details">
+                        <div class="details-sub">
+                  
+                           <h1><%= menus[5].weekday %></h1>   
+                        </div>
+                    </div>
+                </div>
+            </a></h1> 
+            </div>
+        
+            <div tabindex="0" class="carousel--item seven card">
+                <h1><a style ="text-decoration: none;" href="/menus/<%= menus[6]._id%>">
+                    <div class="food-items">
+               
+                        <div class="details">
+                            <div class="details-sub">
+                  
+                            <h1><%= menus[6].weekday %></h1>   
+                            </div>
+                        </div>
+                    </div>
+                </a></h1> 
+            </div>
+        </div>
+      </div>
+    </header>
+  </body>
+
+  <style>
+    .carousel {
+
+  margin-left: 13rem;
+  margin-right: 13rem;
+ 
+  display: flex;
+  gap: 7em;
+  padding: 2px; 
+  
+/* adds scrolling for the element: */
+  overflow-x: scroll;
+/* removes the horizontal scrollbar: */
+ 
+  
+}
+.card{
+    background-size: cover;
+  box-shadow: 5px 20px 20px 0 rgb(255, 249, 249);
+  box-decoration-break: slice;
+  border-radius: 20px;
+  box-sizing: border-box;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 400px;
+  min-width: 400px;
+	height: auto;
+	border-radius: 20px;
+  border-color: whitesmoke;
+  border-width: 100px;
+	color: #fff;
+	font-size: 2rem;
+}
+.carousel--item {
+/* carousel item should have min-width declared: */
+  min-width: 400px;
+/* carousel item should have defined height: */
+  height: 580px;
+  
+  border-radius: 1em;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: 200ms ease;
+}
+
+.carousel--item:hover {
+  opacity: 1;
+  scale: 1.11;
+  transform-origin: bottom;
+}
+h1{
+  font-size: 4rem;
+  font-family:copperplate gothic light;
+  font-weight: normal;
+  color: rgb(244, 243, 248);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6em;
+  background-color: black;
+}
+h2{
+    font-size: 3rem;
+    font-family:copperplate gothic light;
+  font-weight: normal;
+  color: rgb(242, 240, 248);
+  text-align: left;
+  margin-left: auto;
+ 
+  
+
+}
+.carousel--item:focus-visible {
+  opacity: 1;
+  scale: 2;
+  transform-origin: bottom;
+  outline: 4px solid rgb(173, 173, 90);
+  outline-offset: 2px;
+}
+
+.one {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675275292/mess/menu_zsbijm.png');
+}
+
+.two {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675275292/mess/menu_zsbijm.png');
+}
+
+.three {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675275292/mess/menu_zsbijm.png');
+}
+
+.four {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675275292/mess/menu_zsbijm.png');
+}
+
+.five {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675275292/mess/menu_zsbijm.png');
+}
+.six {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675275292/mess/menu_zsbijm.png');
+}
+.seven {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675275292/mess/menu_zsbijm.png');
+}
+
+body {
+  background-image: url('https://res.cloudinary.com/dtca2p99y/image/upload/v1675107463/mess/index3_t26ctr.png');
+}
+  </style>

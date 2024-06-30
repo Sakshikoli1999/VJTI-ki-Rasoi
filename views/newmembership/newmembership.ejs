@@ -1,0 +1,37 @@
+<% layout ('layouts/boilerplate')%>
+    <div class="relative">
+        <img src="https://res.cloudinary.com/dtca2p99y/image/upload/v1675324993/mess/login2_pm6kbq.png" class="absolute inset-0 h-full w-full object-cover" alt="" />
+        <div class="relative bg-emerald-700 bg-opacity-90">
+          <svg class="absolute inset-x-0 -bottom-1 text-white" viewBox="0 0 1160 163">
+            <path fill="currentColor" d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"></path>
+          </svg>
+          <div class="relative mx-auto overflow-hidden px-4 py-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
+            <div class="flex flex-col items-center justify-between xl:flex-row">
+              <div class="mb-12 w-full max-w-xl xl:mb-0 xl:w-7/12 xl:pr-16">
+                <h2 class="mb-6 max-w-lg font-sans text-3xl font-bold tracking-tight text-white sm:text-7xl sm:leading-none">Register as a Member</h2>
+              </div>
+              <div class="w-full max-w-xl xl:w-5/12 xl:px-8">
+                <div class="overflow-hidden rounded-3xl border-emerald-600 bg-white p-7 shadow-2xl shadow-emerald-300 sm:p-10">
+                  <form action="/newmembership" method="post" novalidate>
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
+                        <input type="text" name="name" id="name" class="bg-gray-50 shadow dark:border border border-gray-300 text-gray-900 sm:text-sm rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Full Name" required="">
+                    </div><br>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 shadow dark:border border border-gray-300 text-gray-900 sm:text-sm rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Email Id" required="">
+                    </div><br>
+                    <div>
+                        <label for="card" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Card Number : <%=Math.floor((Math.random() * 100) + 1)%></label>
+                        <input type="text" name="card" id="card" class="bg-gray-50 shadow dark:border border border-gray-300 text-gray-900 sm:text-sm rounded-3xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter the above Card Number" required="">
+                    <br></div><br>
+                    <div align="center">
+                        <button class="rounded-full border-2 border-green-500 px-6 py-1 text-green-600 transition-colors hover:bg-green-500 hover:text-white">Register as a Member</button>
+                        </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

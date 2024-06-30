@@ -1,0 +1,46 @@
+<!-- component -->
+<strong><h1>Member List
+</h1>
+</strong>
+
+<table id="racetimes">
+<tr id="firstrow"><th>Name</th><th>Email</th><th>Card</th></tr>
+<% for (let newmember of newmemberlist){%>
+<tr><td><%=newmember.name%></td><td><%=newmember.email%></td><td><%=newmember.card%></td></tr>
+<% } %> 
+</table>
+<%- include('../partials/footer')%>
+
+<style>
+    * {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Arial, sans-serif; }
+
+h1 {text-align: center; color:honeydew;}
+h1{
+    font-family:copperplate gothic light;
+    background-color: black ;opacity:70%; height:6rem;
+  }
+body { background-image: url("https://res.cloudinary.com/dg2ynubvs/image/upload/v1675145639/member21_aq2bcx.png")}
+
+h1, table { text-align: center; font-size: 5rem; font-style:unset;}
+
+table {border-collapse: collapse;  width: 70%; margin: 0 auto 5rem; margin-top: 6rem;}
+table:hover{cursor: pointer;}
+th {padding: 1.5rem;font-size: 1.6rem; color: aliceblue;}
+
+ td { padding: 1.5rem; font-size: 1.3rem; }
+
+tr {background: hsl(50, 50%, 80%); }
+
+tr, td { transition: .4s ease-in; } 
+
+tr:first-child {background:  hsla(32, 18%, 51%, 0.5);}
+
+tr:nth-child(even) { background: hsla(50, 50%, 80%, 0.7); }
+
+td:empty {background: hsla(50, 25%, 60%, 0.7); }
+
+tr:hover:not(#firstrow), tr:hover td:empty {background: rgb(110, 100, 76); pointer-events: visible;}
+tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+
+</style>
